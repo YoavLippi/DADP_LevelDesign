@@ -1371,7 +1371,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maximum: 100
   current: 0
-  _PlayerDetectionInfo: {fileID: 1906586025}
+  EnemyDetection: {fileID: 0}
   HealthMask: {fileID: 239319395}
 --- !u!114 &1414954400
 MonoBehaviour:
@@ -1604,8 +1604,8 @@ GameObject:
   - component: {fileID: 1906586022}
   - component: {fileID: 1906586021}
   - component: {fileID: 1906586023}
-  - component: {fileID: 1906586024}
   - component: {fileID: 1906586025}
+  - component: {fileID: 1906586026}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1670,21 +1670,6 @@ MonoBehaviour:
   horizontalSpeed: 5
   verticalSpeed: 5
   body: {fileID: 1401381795}
---- !u!114 &1906586024
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1906586020}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 77429610e3c24f44c8af77303273930e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerSpeed: 5.5
-  gravityValue: -19.6
-  jumpHeight: 1
 --- !u!114 &1906586025
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1698,6 +1683,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerDetectionAmt: 100
+--- !u!114 &1906586026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1906586020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d114a297106d5264f888797166478edd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerSpeed: 1
+  gravityValue: 9.8
+  jumpHeight: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

@@ -7,14 +7,14 @@ public class DetectionBar : MonoBehaviour
 {
     public int maximum;
     public int current;
-    public PlayerDetectionInfo _PlayerDetectionInfo;
+    public EnemyDetection EnemyDetection;
     public Image HealthMask;
     
 
 
     void Update()
     {
-        GetCurrentFill(HealthMask, _PlayerDetectionInfo.PlayerDetectionAmt);
+        GetCurrentFill(HealthMask,EnemyDetection.EnemyDetectionAmt);
     }
 
     void GetCurrentFill(Image mask, float attributeValue)

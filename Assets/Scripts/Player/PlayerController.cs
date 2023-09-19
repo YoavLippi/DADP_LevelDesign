@@ -1,10 +1,9 @@
-using Unity.VisualScripting;
 using UnityEngine;
  
 public class PlayerController : MonoBehaviour
 {
     CharacterController characterController;
-    [SerializeField] private float playerSpeed = 5;
+    [SerializeField] private float playerSpeed =1;
     [SerializeField] private float gravityValue = 9.8f;
     [SerializeField] private float jumpHeight;
     private float velocity = 0;
@@ -14,11 +13,8 @@ public class PlayerController : MonoBehaviour
     #region crouch
         private Vector3 crouchScale = new Vector3(1, 0.5f, 1);
         private Vector3 playerScale = new Vector3(1, 1f, 1);
+    #endregion
 
-
-
-        #endregion
- 
     private void Start()
     {
         characterController = GetComponent<CharacterController>();
@@ -59,7 +55,7 @@ public class PlayerController : MonoBehaviour
 
         playerVelocity.y += gravityValue * Time.deltaTime;
         characterController.Move(playerVelocity * Time.deltaTime);
-        
+
         #region Handles Crouch
         
             if (Input.GetKeyDown(KeyCode.LeftShift))
@@ -76,14 +72,14 @@ public class PlayerController : MonoBehaviour
                 transform.localScale = playerScale;
                 transform.position = new Vector3(transform.position.x, transform.position.y + 0.5f, transform.position.z);
             }
-    
-
+        
         #endregion
+
+
     }
 
     private Vector3 MultiplyComponents(Vector3 a, Vector3 b)
     {
         return new Vector3(a.x * b.x, a.y * b.y, a.z * b.z);
     }
-
 }
