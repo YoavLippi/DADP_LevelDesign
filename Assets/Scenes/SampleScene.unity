@@ -1696,8 +1696,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d114a297106d5264f888797166478edd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerSpeed: 5
-  gravityValue: 1.5
+  playerSpeed: 2
+  gravityValue: -19.6
   jumpHeight: 1
 --- !u!54 &1906586027
 Rigidbody:
