@@ -6,6 +6,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float playerSpeed =1;
     [SerializeField] private float gravityValue = 9.8f;
     [SerializeField] private float jumpHeight;
+    [SerializeField] private CapsuleCollider Collision;
+    [SerializeField] private Camera lookCamera;
     private float velocity = 0;
     private bool groundedPlayer;
     private Vector3 playerVelocity;
@@ -61,16 +63,26 @@ public class PlayerController : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.LeftShift))
             {
                 playerSpeed = 2.1f;
-                transform.localScale = crouchScale;
-                transform.position = new Vector3(transform.position.x, transform.position.y - 0.5f, transform.position.z);
-                
+                /*transform.localScale = crouchScale;
+                transform.position = new Vector3(transform.position.x, transform.position.y-crouchScale.y, transform.position.z);*/
+                characterController.height = 1.5f;
+                characterController.center = new Vector3(0,-0.25f,0);
+                Collision.height = characterController.height;
+                Collision.center = characterController.center;
+                lookCamera.transform.position = transform.position + new Vector3(0, 0f, 0);
             }
 
             if (Input.GetKeyUp(KeyCode.LeftShift))
             {
                 playerSpeed = 5.5f;
-                transform.localScale = playerScale;
-                transform.position = new Vector3(transform.position.x, transform.position.y + 0.5f, transform.position.z);
+                /*transform.localScale = playerScale;
+                transform.position = new Vector3(transform.position.x, transform.position.y+crouchScale.y, transform.position.z);
+                */
+                characterController.height = 2f;
+                characterController.center = Vector3.zero;
+                Collision.height = characterController.height;
+                Collision.center = characterController.center;
+                lookCamera.transform.position = transform.position + new Vector3(0, 0.59f, 0);
             }
         
         #endregion
