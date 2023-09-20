@@ -8,6 +8,7 @@ public class aidetection : MonoBehaviour
     public float distance=10f, angle=30f, height=1f;
     public Color clmesh = Color.red;
     Mesh mesh;
+    public float chasing;
     int speed = 10;
      int scanps = 30;
     public LayerMask layers;
@@ -19,16 +20,21 @@ public class aidetection : MonoBehaviour
     int count;
     float scanint;
     float scantimer;
+    botmovement bm;
+    Rigidbody enemysrb;
     public List<GameObject> objectsdetetced = new List<GameObject>();
     // Start is called before the first frame update
     void Start()
     {
         scanint = 1f / scanps;
+        bm = GetComponent<botmovement>();
+        enemysrb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
     void Update()
     {
+       // Debug.Log(scanint);
         scantimer -= Time.deltaTime; 
         if(scantimer<0)
         {
@@ -41,20 +47,29 @@ public class aidetection : MonoBehaviour
         }
         else
         {
-            barfull -= Time.deltaTime;
+            if (barfull>0 && !bm.ischasing)
+            {
+              
+                
+                barfull -= Time.deltaTime;
+            }
+            
         }
-        if (barfull>=10f)
+        if (barfull>=1f)
         {
+            bm.ischasing = true;
             Chaseplayer();
+            enemysrb.isKinematic = false;
         }
-
+       // Debug.Log(barfull);
         // checking if this works code below. erase if not redrawing th mesh 
-        Createmesh();
+       
     }
 
     private void Chaseplayer()
     {
-        transform.position = Vector3.MoveTowards(transform.position, player.transform.position, speed);
+        transform.position = Vector3.MoveTowards(transform.position, player.transform.position, chasing);
+        transform.LookAt(player.transform);
     }
 
     public bool IsInsight(GameObject obj)

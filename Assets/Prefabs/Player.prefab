@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 148672766980242478}
   - component: {fileID: 6223961097140614128}
   - component: {fileID: 5868700781447435912}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Collision
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -133,7 +133,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5970220216633033723}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FirePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -172,7 +172,7 @@ GameObject:
   - component: {fileID: 9054167043468800370}
   - component: {fileID: 8944222728005102261}
   - component: {fileID: 6275169467841402316}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -345,7 +345,7 @@ GameObject:
   - component: {fileID: 3550325322801725488}
   - component: {fileID: 713596565762264258}
   - component: {fileID: 3187446743467747867}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: MainCamera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -437,7 +437,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3030369502035482078}
   - component: {fileID: 6576443659705859407}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: Ui_Camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -561,6 +561,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 810353378d379744a8f3ddba2ef20d9c, type: 3}
       propertyPath: m_Name
       value: Knife_Final
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 810353378d379744a8f3ddba2ef20d9c, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
