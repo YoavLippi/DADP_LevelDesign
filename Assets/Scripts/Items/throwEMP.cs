@@ -10,30 +10,34 @@ public class throwEMP : MonoBehaviour
     [SerializeField] private float empFireSpeed;
     [SerializeField] private float initialUpwardSpeed;
     [SerializeField] private float gravityForce;
-    private bool hasFired = false;
+    [SerializeField] private bool hasFired = false;
     private float timer = 0f;
     private Rigidbody bulletRigidbody;
-
-   /* public void Awake()
-    {
-        Destroy(empPrefab, 2f);
-    }*/  // method gives an error - destroy prefab 2 seconds after being fired
-
+    
+    public EMPCount _EmpCount;
+    
     private void Update()
     {
-        if (Input.GetButtonDown("Fire1") && !hasFired)
+        if (Input.GetButtonDown("Fire2") && !hasFired)
         {
-            var bullet = Instantiate(empPrefab, FirePoint.position, FirePoint.rotation);
-            bulletRigidbody = bullet.GetComponent<Rigidbody>();
-            Vector3 initialVelocity = FirePoint.forward * empFireSpeed;
-            initialVelocity += Vector3.up * initialUpwardSpeed;
-            bulletRigidbody.velocity = initialVelocity;
-            hasFired = true;
+            if (_EmpCount.EMPs >=1 )
+            {
+                _EmpCount.EMPs --;
+                Debug.Log("Counter is increased");
+                var EMPGrenade = Instantiate(empPrefab, FirePoint.position, FirePoint.rotation);
+                bulletRigidbody = EMPGrenade.GetComponent<Rigidbody>();
+                Vector3 initialVelocity = FirePoint.forward * empFireSpeed;
+                initialVelocity += Vector3.up * initialUpwardSpeed;
+                bulletRigidbody.velocity = initialVelocity;
+                hasFired = true;    
+            }
         }
-        if (Input.GetButtonUp("Fire1"))
+        
+        if (Input.GetButtonUp("Fire2"))
         {
             hasFired = false;
         }
+        
     }
 
     private void FixedUpdate()
