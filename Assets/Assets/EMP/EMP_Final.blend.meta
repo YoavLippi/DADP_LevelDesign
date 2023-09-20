@@ -1,9 +1,14 @@
 fileFormatVersion: 2
-guid: c6b92bf9a01c4ef4694be353cca8b3b1
+guid: 6feab715ea345e44d8beb9867ce39add
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: EMP_Mat
+    second: {fileID: 2100000, guid: 1cbd8ca277be6f44a981e972eb3d4e7a, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -37,7 +42,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 1
+    addColliders: 0
     useSRGBMaterialColor: 1
     sortHierarchyByName: 1
     importPhysicalCameras: 1
