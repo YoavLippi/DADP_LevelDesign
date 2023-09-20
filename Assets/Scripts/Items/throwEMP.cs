@@ -14,10 +14,10 @@ public class throwEMP : MonoBehaviour
     private float timer = 0f;
     private Rigidbody bulletRigidbody;
 
-    public void Awake()
+   /* public void Awake()
     {
         Destroy(empPrefab, 2f);
-    }
+    }*/  // method gives an error - destroy prefab 2 seconds after being fired
 
     private void Update()
     {
