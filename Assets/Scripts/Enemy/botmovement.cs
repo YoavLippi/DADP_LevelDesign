@@ -12,11 +12,16 @@ public class botmovement : MonoBehaviour
    public bool ischasing=false;
    
    public bool isturning = false;
+    public bool moveing;
    
     // Start is called before the first frame update
     void Start()
     {
-        target = checks[0];
+        if(moveing)
+        {
+            target = checks[0];
+        }
+      
     }
 
     // Update is called once per frame
@@ -24,47 +29,52 @@ public class botmovement : MonoBehaviour
     {
         if (!ischasing)
         {
-            // Debug.Log(isturning);
-            if (isturning)
-            {
-                timer += Time.deltaTime;
-                var lookPos = target.transform.position - transform.position;
-                lookPos.y = 0;
-                var rotation = Quaternion.LookRotation(lookPos);
-                transform.rotation = Quaternion.Slerp(transform.rotation, rotation, Time.deltaTime * turnspeed);
-                if (rotation == transform.rotation)
-                {
-                    timer = 0;
-                    isturning = false;
-                }
-                if (timer >= 0.5f)
-                {
-                    timer = 0;
-                    isturning = false;
-                }
-            }
-            else
+            if (moveing)
             {
 
-                transform.position = Vector3.MoveTowards(transform.position, target.transform.position, speed);
-                if (transform.position == target.transform.position)
+
+                // Debug.Log(isturning);
+                if (isturning)
+                {
+                    timer += Time.deltaTime;
+                    var lookPos = target.transform.position - transform.position;
+                    lookPos.y = 0;
+                    var rotation = Quaternion.LookRotation(lookPos);
+                    transform.rotation = Quaternion.Slerp(transform.rotation, rotation, Time.deltaTime * turnspeed);
+                    if (rotation == transform.rotation)
+                    {
+                        timer = 0;
+                        isturning = false;
+                    }
+                    if (timer >= 0.5f)
+                    {
+                        timer = 0;
+                        isturning = false;
+                    }
+                }
+                else
                 {
 
-                    // Debug.Log(index);
-                    if (index < checks.Length)
+                    transform.position = Vector3.MoveTowards(transform.position, target.transform.position, speed);
+                    if (transform.position == target.transform.position)
                     {
 
-                        target = checks[index];
-                        index++;
-                    }
-                    else
-                    {
-                        index = 0;
-                        target = checks[index];
-                    }
-                   // Debug.Log(index);
-                    isturning = true;
+                        // Debug.Log(index);
+                        if (index < checks.Length)
+                        {
 
+                            target = checks[index];
+                            index++;
+                        }
+                        else
+                        {
+                            index = 0;
+                            target = checks[index];
+                        }
+                        // Debug.Log(index);
+                        isturning = true;
+
+                    }
                 }
             }
         }
