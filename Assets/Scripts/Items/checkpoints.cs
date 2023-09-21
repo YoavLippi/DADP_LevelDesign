@@ -1,13 +1,17 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class checkpoints : MonoBehaviour
 {
     public GameObject spwnpoint;
     public checkpoints ck;
     public int files;
-    // Start is called before the first frame update
+    
+
+
     private void OnTriggerEnter(Collider other)
     {
         ck.spwnpoint = this.gameObject;
