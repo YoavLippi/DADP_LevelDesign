@@ -6,6 +6,7 @@ public class PlayerAttack : MonoBehaviour
 {
     private Animator animator;
     public bool midanimation;
+    public KnifeAttack knife;
 
     private void Start()
     {
@@ -22,10 +23,20 @@ public class PlayerAttack : MonoBehaviour
         {
             if (animator != null)
             {
-                animator.SetTrigger("Attack");
+                //this is NOT the cooldown
+                if (!knife.attacking)
+                {
+                    animator.SetTrigger("Attack");
+                    StartCoroutine(attack());
+                }
             }
         }
     }
-    
-    
+
+    private IEnumerator attack()
+    {
+        knife.attacking = true;
+        yield return new WaitForSeconds(0.7f);
+        knife.attacking = false;
+    }
 }
