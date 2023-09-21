@@ -15,6 +15,7 @@ public class EnemyDetection : MonoBehaviour
         }
         if (EnemyDetectionAmt<=0)
         {
+            Cursor.lockState = CursorLockMode.None;
             _sceneLoader.LoadEndScene();
         }
        

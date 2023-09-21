@@ -57,7 +57,7 @@ public class aidetection : MonoBehaviour
             }
             
         }
-        if (barfull>=1f)
+        if (barfull>=0.4f)
         {
             bm.ischasing = true;
             Chaseplayer();
