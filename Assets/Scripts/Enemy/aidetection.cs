@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class aidetection : MonoBehaviour
 {
@@ -14,7 +15,7 @@ public class aidetection : MonoBehaviour
     public LayerMask layers;
     public LayerMask exclude;
      float barfull=0;
-    private GameObject bar;
+    private Slider bar;
     Collider[] collisiders = new Collider[50];
     public GameObject player;
     int count;
@@ -34,6 +35,7 @@ public class aidetection : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        bar.value = barfull;
        // Debug.Log(scanint);
         scantimer -= Time.deltaTime; 
         if(scantimer<0)

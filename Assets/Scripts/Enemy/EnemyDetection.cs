@@ -5,4 +5,18 @@ using UnityEngine;
 public class EnemyDetection : MonoBehaviour
 {
     public int EnemyDetectionAmt = 100;
+    public GameObject endpanel;
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("enemy")) 
+        {
+            EnemyDetectionAmt -= 50;
+        }
+        if (EnemyDetectionAmt>=0)
+        {
+            endpanel.SetActive(true);
+        }
+       
+    }
 }
