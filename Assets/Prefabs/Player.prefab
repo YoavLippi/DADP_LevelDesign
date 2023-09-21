@@ -286,6 +286,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d13b88d700fb0f54d91efe5e58dc9268, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  midanimation: 0
+  knife: {fileID: 8876573315374222135}
 --- !u!95 &9054167043468800370
 Animator:
   serializedVersion: 5
@@ -334,6 +336,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnemyDetectionAmt: 100
+  endpanel: {fileID: 0}
 --- !u!1 &7223630366689376951
 GameObject:
   m_ObjectHideFlags: 0
@@ -597,6 +600,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5808a11d0cfb3ec41a4f26d117029ac7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attacking: 0
 --- !u!65 &8286086047364236490
 BoxCollider:
   m_ObjectHideFlags: 0

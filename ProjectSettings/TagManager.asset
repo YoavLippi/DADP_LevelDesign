@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Enemy
   - BreakableDoor
+  - EndDoor
+  - PlayerCollision
   layers:
   - Default
   - TransparentFX

@@ -10,6 +10,7 @@ public class DoorTrigger : MonoBehaviour
     {
         if (other.CompareTag("PlayerCollision"))
         {
+            Debug.Log(other.gameObject.tag);
             _SceneLoader.LoadEndScene();        
         }
     }

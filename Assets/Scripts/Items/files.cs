@@ -7,9 +7,10 @@ using UnityEngine.ProBuilder.Shapes;
 public class files : MonoBehaviour
 {
     public checkpoints ck;
-    public GameObject FinalDoor;
     public GameObject SecretDoor;
-    public GameObject lastDoor;
+    public GameObject Keydoor1;
+    public GameObject Keydoor2;
+    public GameObject FinalDoor;
     public TextMeshProUGUI FilesText;
     
     // Start is called before the first frame update
@@ -22,9 +23,10 @@ public class files : MonoBehaviour
         ck.files++;
         if (ck.files == 3)
         {
-            FinalDoor.SetActive(false);
             SecretDoor.SetActive(false);
-            lastDoor.SetActive(true);
+            Keydoor1.SetActive(false);
+            Keydoor2.SetActive(false);
+            FinalDoor.SetActive(true);
         }
         Destroy(gameObject);
     }
