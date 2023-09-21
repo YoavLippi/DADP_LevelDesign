@@ -9,6 +9,7 @@ public class files : MonoBehaviour
     public checkpoints ck;
     public GameObject FinalDoor;
     public GameObject SecretDoor;
+    public GameObject lastDoor;
     public TextMeshProUGUI FilesText;
     
     // Start is called before the first frame update
@@ -23,6 +24,7 @@ public class files : MonoBehaviour
         {
             FinalDoor.SetActive(false);
             SecretDoor.SetActive(false);
+            lastDoor.SetActive(true);
         }
         Destroy(gameObject);
     }
