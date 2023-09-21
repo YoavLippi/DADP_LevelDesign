@@ -12,18 +12,19 @@ public class files : MonoBehaviour
     public TextMeshProUGUI FilesText;
     
     // Start is called before the first frame update
+    public void Update()
+    {
+        FilesText.text = "Files Collected: " + ck.files ;
+    }
     private void OnTriggerEnter(Collider other)
     {
         ck.files++;
-        Destroy(gameObject);
         if (ck.files == 3)
         {
             FinalDoor.SetActive(false);
             SecretDoor.SetActive(false);
         }
+        Destroy(gameObject);
     }
-    public void Update()
-    {
-        FilesText.text = "Files Collected: " + ck.files ;
-    }
+
 }
