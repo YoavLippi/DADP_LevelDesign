@@ -4,29 +4,35 @@ using UnityEngine;
 
 public class botmovement : MonoBehaviour
 {
-    public float speed,turnspeed;
-     GameObject target;
+    public float speed, turnspeed;
+    GameObject target;
     public GameObject[] checks;
     int index = 0;
-    float timer=0;
-   public bool ischasing=false;
-   
-   public bool isturning = false;
+    float timer = 0;
+    public bool ischasing = false;
+
+    public bool isturning = false;
     public bool moveing;
-   
+
     // Start is called before the first frame update
     void Start()
     {
-        if(moveing)
+        if (moveing)
         {
             target = checks[0];
         }
-      
+
     }
 
     // Update is called once per frame
     void Update()
     {
+      /*  if(this.gameObject.name== "moveenemy")
+        {
+            Debug.Log(transform.position - target.transform.position);
+            Debug.Log(index); 
+        }*/
+        
         if (!ischasing)
         {
             if (moveing)
@@ -56,10 +62,10 @@ public class botmovement : MonoBehaviour
                 {
 
                     transform.position = Vector3.MoveTowards(transform.position, target.transform.position, speed);
-                    if (transform.position == target.transform.position)
+                    if ((transform.position- target.transform.position).magnitude<1)
                     {
 
-                        // Debug.Log(index);
+                       
                         if (index < checks.Length)
                         {
 
@@ -71,12 +77,14 @@ public class botmovement : MonoBehaviour
                             index = 0;
                             target = checks[index];
                         }
-                        // Debug.Log(index);
+                       //  Debug.Log(index);
                         isturning = true;
 
                     }
+
                 }
             }
         }
     }
 }
+
