@@ -9,7 +9,7 @@ public class EnemyDetection : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("enemy")) 
+        if (collision.gameObject.name== "Collision") 
         {
             EnemyDetectionAmt -= 50;
         }
