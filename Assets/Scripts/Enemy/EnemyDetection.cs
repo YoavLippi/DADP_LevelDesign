@@ -6,14 +6,14 @@ public class EnemyDetection : MonoBehaviour
 {
     public int EnemyDetectionAmt = 100;
     public SceneLoader _sceneLoader;
-
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        if (collision.gameObject.CompareTag("Enemy")) 
+        Debug.Log(other.gameObject.tag);
+        if (other.gameObject.CompareTag("Enemy")) 
         {
             EnemyDetectionAmt -= 50;
         }
-        if (EnemyDetectionAmt>=0)
+        if (EnemyDetectionAmt<=0)
         {
             _sceneLoader.LoadEndScene();
         }
