@@ -3991,6 +3991,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6355876628577408270, guid: 06034be7b6ee7db4a8c5478f0695c5c1, type: 3}
+      propertyPath: EnemyDetection
+      value: 
+      objectReference: {fileID: 1369067918}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5695,7 +5699,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ck: {fileID: 1841917985}
-  _SceneLoader: {fileID: 3081616847351037563, guid: 0aa02b32436d3d44d8298cf5b7ece418, type: 3}
+  FinalDoor: {fileID: 1223840816}
+  SecretDoor: {fileID: 805408289}
   FilesText: {fileID: 637708363}
 --- !u!23 &730381553
 MeshRenderer:
@@ -7494,7 +7499,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ck: {fileID: 1841917985}
-  _SceneLoader: {fileID: 3081616847351037563, guid: 0aa02b32436d3d44d8298cf5b7ece418, type: 3}
+  FinalDoor: {fileID: 1223840816}
+  SecretDoor: {fileID: 805408289}
   FilesText: {fileID: 637708363}
 --- !u!23 &979987105
 MeshRenderer:
@@ -10118,7 +10124,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ck: {fileID: 1841917985}
-  _SceneLoader: {fileID: 3081616847351037563, guid: 0aa02b32436d3d44d8298cf5b7ece418, type: 3}
+  FinalDoor: {fileID: 1223840816}
+  SecretDoor: {fileID: 805408289}
   FilesText: {fileID: 637708363}
 --- !u!23 &1207782217
 MeshRenderer:
@@ -11103,6 +11110,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3284572638875567476, guid: 9a1ec4504555c9a4b97184f1924b1e67, type: 3}
   m_PrefabInstance: {fileID: 5601587872062981185}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1369067918 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6275169467841402316, guid: 9a1ec4504555c9a4b97184f1924b1e67, type: 3}
+  m_PrefabInstance: {fileID: 5601587872062981185}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1369067916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af85cd8ab7517ed42abf0da3ef413511, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1378692584
 GameObject:
   m_ObjectHideFlags: 0

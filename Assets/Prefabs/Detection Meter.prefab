@@ -166,7 +166,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maximum: 100
   current: 0
-  EnemyDetection: {fileID: 0}
+  EnemyDetection: {fileID: 6275169467841402316, guid: 9a1ec4504555c9a4b97184f1924b1e67, type: 3}
   HealthMask: {fileID: 4340659033468125123}
 --- !u!1 &9160630184648344384
 GameObject:

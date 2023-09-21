@@ -2,11 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.ProBuilder.Shapes;
 
 public class files : MonoBehaviour
 {
     public checkpoints ck;
-    public SceneLoader _SceneLoader;
+    public GameObject FinalDoor;
+    public GameObject SecretDoor;
     public TextMeshProUGUI FilesText;
     
     // Start is called before the first frame update
@@ -16,7 +18,8 @@ public class files : MonoBehaviour
         Destroy(gameObject);
         if (ck.files == 3)
         {
-            _SceneLoader.LoadEndScene();   
+            FinalDoor.SetActive(false);
+            SecretDoor.SetActive(false);
         }
     }
     public void Update()
