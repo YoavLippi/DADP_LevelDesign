@@ -13,7 +13,7 @@ public class PlayerAttack : MonoBehaviour
         animator = GetComponent<Animator>();
         if (animator == null)
         {
-            Debug.LogError("Animator component is missing on the GameObject.");
+            
         }
     }
 

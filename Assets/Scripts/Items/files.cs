@@ -16,11 +16,12 @@ public class files : MonoBehaviour
     // Start is called before the first frame update
     public void Update()
     {
-        FilesText.text = "Files Collected: " + ck.files ;
+        //FilesText.text = "Files Collected: " + ck.files;
     }
     private void OnTriggerEnter(Collider other)
     {
         ck.files++;
+        FilesText.text = "Files Collected: " + ck.files;
         if (ck.files == 3)
         {
             SecretDoor.SetActive(false);

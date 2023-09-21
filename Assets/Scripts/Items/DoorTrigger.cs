@@ -11,6 +11,7 @@ public class DoorTrigger : MonoBehaviour
         if (other.CompareTag("PlayerCollision"))
         {
             Debug.Log(other.gameObject.tag);
+            Cursor.lockState = CursorLockMode.None;
             _SceneLoader.LoadEndScene();        
         }
     }
