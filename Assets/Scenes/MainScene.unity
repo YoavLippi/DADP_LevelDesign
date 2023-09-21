@@ -195,8 +195,8 @@ Transform:
   - {fileID: 634876231}
   - {fileID: 1159271779}
   - {fileID: 932679242}
-  - {fileID: 947558585}
   - {fileID: 140792522}
+  - {fileID: 947558585}
   - {fileID: 1747656619}
   - {fileID: 163655224}
   m_Father: {fileID: 0}
@@ -804,6 +804,7 @@ MonoBehaviour:
   exclude:
     serializedVersion: 2
     m_Bits: 1
+  bar: {fileID: 313587263}
   player: {fileID: 1369067916}
   objectsdetetced: []
 --- !u!54 &140792518
@@ -913,7 +914,7 @@ Transform:
   m_GameObject: {fileID: 140792515}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -1, z: -0, w: 0}
-  m_LocalPosition: {x: -9.760002, y: 2.3200002, z: 10.330003}
+  m_LocalPosition: {x: -9.760008, y: 2.3200006, z: 10.330012}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1453,6 +1454,7 @@ MonoBehaviour:
   exclude:
     serializedVersion: 2
     m_Bits: 1
+  bar: {fileID: 584114188}
   player: {fileID: 1369067916}
   objectsdetetced: []
 --- !u!54 &163655220
@@ -2227,6 +2229,7 @@ MonoBehaviour:
   exclude:
     serializedVersion: 2
     m_Bits: 1
+  bar: {fileID: 255232509}
   player: {fileID: 1369067916}
   objectsdetetced: []
 --- !u!54 &271290161
@@ -2892,6 +2895,7 @@ MonoBehaviour:
   exclude:
     serializedVersion: 2
     m_Bits: 1
+  bar: {fileID: 718269435}
   player: {fileID: 1369067916}
   objectsdetetced: []
 --- !u!54 &370476879
@@ -4062,6 +4066,7 @@ MonoBehaviour:
   exclude:
     serializedVersion: 2
     m_Bits: 1
+  bar: {fileID: 2105773040}
   player: {fileID: 1369067916}
   objectsdetetced: []
 --- !u!54 &528803058
@@ -4894,6 +4899,7 @@ MonoBehaviour:
   exclude:
     serializedVersion: 2
     m_Bits: 1
+  bar: {fileID: 1471764997}
   player: {fileID: 1369067916}
   objectsdetetced: []
 --- !u!54 &634876227
@@ -6820,6 +6826,7 @@ MonoBehaviour:
   exclude:
     serializedVersion: 2
     m_Bits: 1
+  bar: {fileID: 1688123729}
   player: {fileID: 1369067916}
   objectsdetetced: []
 --- !u!54 &932679238
@@ -7310,6 +7317,7 @@ MonoBehaviour:
   exclude:
     serializedVersion: 2
     m_Bits: 1
+  bar: {fileID: 750251413}
   player: {fileID: 1369067916}
   objectsdetetced: []
 --- !u!54 &947558581
@@ -8149,6 +8157,7 @@ MonoBehaviour:
   exclude:
     serializedVersion: 2
     m_Bits: 1
+  bar: {fileID: 1382938440}
   player: {fileID: 1369067916}
   objectsdetetced: []
 --- !u!54 &1029244944
@@ -9421,6 +9430,7 @@ MonoBehaviour:
   exclude:
     serializedVersion: 2
     m_Bits: 1
+  bar: {fileID: 1144695388}
   player: {fileID: 1369067916}
   objectsdetetced: []
 --- !u!54 &1143089880
@@ -9767,6 +9777,7 @@ MonoBehaviour:
   exclude:
     serializedVersion: 2
     m_Bits: 1
+  bar: {fileID: 1505577976}
   player: {fileID: 1369067916}
   objectsdetetced: []
 --- !u!54 &1159271775
@@ -10551,6 +10562,7 @@ MonoBehaviour:
   exclude:
     serializedVersion: 2
     m_Bits: 1
+  bar: {fileID: 1676516464}
   player: {fileID: 1369067916}
   objectsdetetced: []
 --- !u!54 &1295387714
@@ -11352,6 +11364,7 @@ MonoBehaviour:
   exclude:
     serializedVersion: 2
     m_Bits: 1
+  bar: {fileID: 940734007}
   player: {fileID: 1369067916}
   objectsdetetced: []
 --- !u!54 &1391500861
@@ -14056,6 +14069,7 @@ MonoBehaviour:
   exclude:
     serializedVersion: 2
     m_Bits: 1
+  bar: {fileID: 1395050716}
   player: {fileID: 1369067916}
   objectsdetetced: []
 --- !u!54 &1747656615
@@ -14989,6 +15003,7 @@ MonoBehaviour:
   exclude:
     serializedVersion: 2
     m_Bits: 1
+  bar: {fileID: 1898183551}
   player: {fileID: 1369067916}
   objectsdetetced: []
 --- !u!54 &1888715193
@@ -15662,6 +15677,7 @@ MonoBehaviour:
   exclude:
     serializedVersion: 2
     m_Bits: 1
+  bar: {fileID: 2083225519}
   player: {fileID: 1369067916}
   objectsdetetced: []
 --- !u!54 &1986137834

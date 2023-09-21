@@ -15,7 +15,7 @@ public class aidetection : MonoBehaviour
     public LayerMask layers;
     public LayerMask exclude;
      float barfull=0;
-    private Slider bar;
+    public Slider bar;
     Collider[] collisiders = new Collider[50];
     public GameObject player;
     int count;
